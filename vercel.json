@@ -1,10 +1,14 @@
 {
   "rewrites": [
-    {
-       "source": "/posts/(.*)",
-      "destination": "/db.json"
-    }
+    { "source": "/api/posts", "destination": "/db.json" },
+    { "source": "/api/signup", "destination": "/db.json" }
   ],
+  "routes": [
+    {
+      "src": "/db.json",
+      "dest": "/db.json"
+    }
+  ]
   "build": {
     "env": {
       "NODE_OPTIONS": "--openssl-legacy-provider"
