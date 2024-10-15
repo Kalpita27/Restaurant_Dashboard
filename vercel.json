@@ -1,24 +1,15 @@
 {
   "rewrites": [
     {
-      "source": "/api/:https://github.com/Kalpita27/Restaurant_Dashboard/src/app/shared/api.service.ts*",
-      "destination": "https://github.com/Kalpita27/Restaurant_Dashboard/db.json"
+      "source": "/api/(src/app/shared/api.service.ts*)",
+      "destination": "/db.json"
     }
   ],
   "build": {
     "env": {
       "NODE_OPTIONS": "--openssl-legacy-provider"
 
-    },
-    {
-   "version": 2,
-   "builds": [
-       { "src": "server.js", "use": "@vercel/node" },
-       { "src": "dist/*", "use": "@vercel/static" }
-   ],
-   "routes": [
-       { "src": "/api/(.*)", "dest": "/db.json" }
-   ]
+    }
 }
 
   }
