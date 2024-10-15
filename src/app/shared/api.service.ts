@@ -22,7 +22,7 @@ export class ApiService
   //POST request
   postRestaurent(data:any ) 
   {
-    return this._http.post<any>("http://localhost:3000/posts", data).pipe(map((res:any)=>{
+    return this._http.post<any>("/api/posts", data).pipe(map((res:any)=>{
       return res;
     }))
   }
@@ -30,7 +30,7 @@ export class ApiService
   //GET request
   getRestaurent() 
   {
-    return this._http.get<any>("http://localhost:3000/posts").pipe(map((res:any)=>{
+    return this._http.get<any>("/api/posts").pipe(map((res:any)=>{
       return res;
     }));
   }
@@ -38,7 +38,7 @@ export class ApiService
   //delete request
   deleteRestaurant(id:number) 
   {
-    return this._http.delete<any>("http://localhost:3000/posts/"+id).pipe(map((res:any)=>{
+    return this._http.delete<any>("/api/posts"+id).pipe(map((res:any)=>{
       return res;
     }));
   }
@@ -46,13 +46,13 @@ export class ApiService
   //update request
   updateRestaurant(id: number, data: any) 
   {
-    return this._http.put<any>("http://localhost:3000/posts/"+id,data).pipe(map((res:any)=>{
+    return this._http.put<any>("/api/posts"+id,data).pipe(map((res:any)=>{
       return res;
     }));
   }
 
   getRestaurentById(id: number) {
-    return this._http.get<any>("http://localhost:3000/posts/" + id).pipe(map((res: any) => {
+    return this._http.get<any>("/api/posts" + id).pipe(map((res: any) => {
       return {
         id: res.id,
         name: res.name,
