@@ -9,6 +9,17 @@
     "env": {
       "NODE_OPTIONS": "--openssl-legacy-provider"
 
-    }
+    },
+    {
+   "version": 2,
+   "builds": [
+       { "src": "server.js", "use": "@vercel/node" },
+       { "src": "dist/*", "use": "@vercel/static" }
+   ],
+   "routes": [
+       { "src": "/api/(.*)", "dest": "/db.json" }
+   ]
+}
+
   }
 }
