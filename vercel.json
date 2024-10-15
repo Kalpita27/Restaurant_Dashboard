@@ -1,8 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/api/posts", "destination": "/db.json" },
-    { "source": "/api/signup", "destination": "/db.json" }
-  ],
+   "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api" }
+  ]
   "routes": [
     {
       "src": "/db.json",
