@@ -1,19 +1,11 @@
-const express = require('express');
-const cors = require('cors');
-const fs = require('fs');
-const path = require('path');
+const jsonServer = require('json-server');
+const server = jsonServer.create();
+const router = jsonServer.router('db.json'); // Path to your db.json file
+const middlewares = jsonServer.defaults();
 
-const app = express();
-const PORT = process.env.PORT || 3000;
+server.use(middlewares);
+server.use('/api', router); // Serve db.json data at /api
 
-app.use(cors());
-app.use(express.json());
-
-// Serve db.json
-app.get('/db.json', (req, res) => {
-    res.sendFile(path.join(__dirname, 'db.json'));
-});
-
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+server.listen(3000, () => {
+  console.log('JSON Server is running');
 });
