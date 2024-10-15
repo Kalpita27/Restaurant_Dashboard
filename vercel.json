@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "https://github.com/Kalpita27/Restaurant_Dashboard/blob/main/src/app/shared/api.service.ts",
+      "source": "src/app/shared/api.service.ts",
       "destination": "https://github.com/Kalpita27/Restaurant_Dashboard/blob/main/db.json"
     }
   ],
