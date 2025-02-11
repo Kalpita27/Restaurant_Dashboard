@@ -10,7 +10,7 @@
     "postinstall": "node --openssl-legacy-provider"
   },
   "engines": {
-    "node": "14.x"
+    "node": "22.x"
   },
   "private": true,
   "dependencies": {
