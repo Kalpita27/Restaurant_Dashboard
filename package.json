@@ -9,6 +9,9 @@
     "test": "ng test",
     "postinstall": "node --openssl-legacy-provider"
   },
+  "engines": {
+    "node": "18.x"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~12.2.0",
